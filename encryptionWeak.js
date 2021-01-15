@@ -21,3 +21,24 @@ const decryptionWeak = (arr) => {
 // console.log(test)
 // console.log(decryptionWeak(test))
 
+//Sha-1 ish implementation
+//pad a string with 512 bytes // if str > add 1 followed by 0's till
+// abc = 00000000 00000001 00000010
+// 00000000 00000001 00000010 10000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+//small so more likely focus on
+
+const inputStrToBinary = (str) => {
+    let tempArr = []
+    for(let i=0; i < str.length; i++){
+        let binary = str[i].charCodeAt(0).toString(2)
+        console.log(binary)
+        tempArr.push(binary)
+    }
+    return tempArr
+}
+
+const sha1 = (str) => {
+    inputStrToBinary(str)
+}
+
+console.log(sha1('test'))
